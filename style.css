@@ -11,8 +11,10 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    width: 65%;
     overflow: hidden;
     font-family: 'Poppins', sans-serif;
+    margin: auto;
 }
 
 .container {
@@ -69,10 +71,11 @@ body {
 }
 
 .future-forecast {
-    background-color: rgba(25, 25, 25, 0.4);
+    background-color: rgba(25, 25, 25, 0.6);
     padding: 1.5rem;
     position: fixed;
     bottom: 0;
+    left: 0;
     display: flex;
     color:#fff;
     width: 100%;
@@ -80,7 +83,7 @@ body {
 }
 
 .future-forecast .today {
-    border: 3px solid #fff;
+    border: 1px solid #fff;
     padding: 1.2rem 1.8rem;
     border-radius: 0.5rem;
     background: rgba(0, 0, 0, 0.5);
@@ -128,10 +131,15 @@ body {
 
 @media only screen and (max-width: 1024px) {
     
-        .future-forecast {
+    body {
+        width: 100%;
+    }
+
+    .future-forecast {
         justify-content: start;
         align-items: none;
-        overflow-y: scroll;
+        overflow-y: hidden;
+        overflow-x: scroll;
     }
     .container {
         padding: 1.4rem 2rem;
@@ -146,11 +154,11 @@ body {
     }
 
     .date-container .time {
-        font-size: 2rem;
+        font-size: 1.4rem;
     }
 
     .date-container #am-pm {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .date-container .date {
@@ -162,7 +170,7 @@ body {
     }
 
     .place-container .time-zone {
-        font-size: 2rem;
+        font-size: 1.4rem;
     }
 
     .place-container .country {
@@ -175,5 +183,9 @@ body {
        width: 80vw;
        top: 120px;
        left: calc(100vw - 90vw);
+    }
+
+    .weather-forecast .weather-forecast-item .temp {
+        font-size: 0.9rem;
     }
 }
